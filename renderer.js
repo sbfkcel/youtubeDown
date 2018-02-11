@@ -123,6 +123,7 @@ oinput.onclick = function(){
     _ts.clickNumber = _ts.clickNumber === undefined ? 0 : _ts.clickNumber+1;
 
     if(_ts.clickNumber >= 2){
+        _ts.clickNumber = undefined;
         let distPath = dialog.showOpenDialog(null,{
             title:'Choose to save the directory',
             defaultPath:path.join(os.homedir(),'Desktop'),
