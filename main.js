@@ -12,10 +12,10 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width: 600,
         height: 130,
-        frame: false, //无边框
-        transparent: true, //透明
-        show: false, //默认不显示
-        hasShadow: false //去除默认阴影
+        frame: false,           //无边框
+        transparent: true,      //透明
+        show: false,            //默认不显示
+        hasShadow: false        //去除默认阴影
     });
 
     //渲染进程完成时才显示窗口
