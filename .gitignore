@@ -1,0 +1,4 @@
+/node_modules/
+/outApp/
+/.vscode/
+.DS_Store

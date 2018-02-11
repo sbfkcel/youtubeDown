@@ -1,0 +1,30 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-mac": "electron-packager ./ YoutubeDown --platform=darwin --out ./outApp --version 0.1.2 --overwrite --icon=./images/icon.ico",
+    "build-win64": "electron-packager ./ YoutubeDown --platform=win32 --arch=x64 --out ./outApp --version 0.1.2 --overwrite --icon=./images/icon.ico"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "electron": "~1.7.8",
+    "electron-packager": "^11.0.0",
+    "fs-extra": "^5.0.0",
+    "js-video-url-parser": "^0.2.7",
+    "ytdl-core": "^0.20.1"
+  }
+}

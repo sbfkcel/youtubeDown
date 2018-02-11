@@ -1,0 +1,50 @@
+* {padding:0; margin:0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+li {list-style:none;}
+a {text-decoration:none;}
+html {font-size:100px;}
+htm,body {overflow:hidden;}
+
+
+body {
+    padding:20px;
+}
+.main {border-radius:6px; box-shadow:0 0 20px rgba(0,0,0,0.5); overflow:hidden;}
+.topBar {height:28px; line-height:28px; background:black; color:white; position:relative;}
+.topBar__title {font-size:0.12rem; font-weight:normal; text-align:center; cursor:default; position:relative; z-index:1;
+    /* 窗口拖拽支持 */
+    -webkit-app-region:drag;
+
+    /* 文字不可选 */
+    -webkit-user-select: none;
+}
+.topBar__cose {width:12px; height:12px; display:block; color:white; position:absolute; left:10px; top:8px; font-size:0; border-radius:500px; background:red; z-index:2; -webkit-app-region: no-drag;}
+
+.topBar__cose:before {
+    content:''; width:6px; height:6px; background:rgba(0,0,0,0.4); display:none; position:absolute; border-radius:50%; left:50%; top:50%; margin:-3px 0 0 -3px;
+}
+.topBar__cose:hover::before {display:block;}
+
+.down {
+    background:white; height:64px; border-bottom-left-radius: 6px; border-bottom-right-radius:6px; position:relative; overflow:hidden;
+}
+.down--ing .down__url,.down--error .down__url {filter:blur(10px);}
+.down--ing .down__down,.down--error .down__down {filter:blur(10px);}
+.down--ing .down__program,.down--error .down__program {display:block;}
+
+.down--error .down__program {background-color:rgba(255,0,0,0.6); color:white;}
+.down--error .down__programBar {width:0;}
+.down--error .down__back {display:block;}
+
+.down__url {
+    width:420px; height:64px; line-height:64px; font-size:0.20rem; padding:0 0 0 10px; float:left; border:0; outline:none;
+}
+.down__url::placeholder {color:#bebebe;}
+.down__url:focus::placeholder {opacity:0.6;}
+.down__down,.down__back {width:100px; height:40px; line-height:40px; position:absolute; font-size:0.16rem; color:white; text-align:center; background:#00cc7e; border-radius:500px; right:12px; top:12px; border:0; cursor:pointer; opacity:1; outline:none;}
+.down__back {background:white; color:red; display:none;}
+.down__down--disabled {cursor:default; background:black; opacity:0.2;}
+.down__program {
+    position:absolute; left:0; height:64px; width:100%; height:64px; line-height:64px; background:rgba(255,255,255,0.4); font-size:0.16rem; z-index:1; overflow: hidden; border-bottom-left-radius:6px; border-bottom-right-radius:6px; display:none;
+}
+.down__programBar {width:90%; height:64px; position:absolute; left:0; top:0; background:rgba(0,204,126,0.4); display:block;}
+.down__programText {padding-left:10px;}
