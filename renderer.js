@@ -20,7 +20,6 @@ let oinput = document.getElementById('down__url'),
     oBack = document.getElementById('down__back'),
     down = (url)=>{
         let obj = urlParser.parse(url);
-
         if(typeof obj === 'object' && obj.provider === 'youtube'){
             let u = urlParser.create({
                 videoInfo:obj,
@@ -47,13 +46,10 @@ let oinput = document.getElementById('down__url'),
                     index = 0;
                 };
             },200);
-
             oProgramText.innerHTML = `Parsing ...`;
-
             
             //等待
             oDown.className = 'down down--ing';
-            
             oProgramBar.style.width = '0';
 
             download.on("response", (res) => {
@@ -181,11 +177,5 @@ ipc.on('selectAll',(event,arr)=>{
 
 //点击按钮关闭窗口
 oCose.onclick = function(){
-    console.log('关闭')
-    ipc.send('window-close')
-    // var window = remote.getCurrentWindow();
-    //    window.close();
-    // console.log(ipc);
-    // ipc.sendSync('window-close');
-    // console.log('关闭');
+    ipc.send('window-close');
 };
