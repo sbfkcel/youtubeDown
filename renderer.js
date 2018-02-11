@@ -18,7 +18,6 @@ let oinput = document.getElementById('down__url'),
     oProgramBar = document.getElementById('down__programBar'),
     oCose = document.getElementById('topBar__cose'),
     oBack = document.getElementById('down__back'),
-    otitle = document.getElementById('topBar__title'),
     down = (url)=>{
         let obj = urlParser.parse(url);
 
@@ -118,12 +117,12 @@ oBack.onclick = function(){
 };
 
 //三击title选择保存目录
-otitle.onclick = function(){
+oinput.onclick = function(){
     const _ts = this;
     clearTimeout(_ts.clickTemp);
     _ts.clickNumber = _ts.clickNumber === undefined ? 0 : _ts.clickNumber+1;
 
-    if(_ts.clickNumber > 2){
+    if(_ts.clickNumber >= 2){
         let distPath = dialog.showOpenDialog(null,{
             title:'Choose to save the directory',
             defaultPath:path.join(os.homedir(),'Desktop'),

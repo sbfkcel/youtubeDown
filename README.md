@@ -28,7 +28,7 @@ npm run build-mac
 ![02.png](https://user-images.githubusercontent.com/5469785/36069850-af320cde-0f2b-11e8-9f4e-0de022f0b749.png)
 
 
-Click title for three consecutive times to save the path
+Click input for three consecutive times to save the path
 
 ## License
 MIT
