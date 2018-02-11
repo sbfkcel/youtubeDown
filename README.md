@@ -4,7 +4,7 @@ Electron based Youtube video download tool
 
 ## Use
 
-2.1 download `Electron based Youtube video download tool`
+2.1 download `https://github.com/sbfkcel/youtubeDown.git`
 
 2.2 `npm install`
 
