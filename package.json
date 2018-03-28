@@ -21,7 +21,7 @@
   "devDependencies": {
   },
   "dependencies": {
-    "electron": "~1.7.8",
+    "electron": "~1.8.4",
     "electron-packager": "^11.0.0",
     "fs-extra": "^5.0.0",
     "js-video-url-parser": "^0.2.7",
